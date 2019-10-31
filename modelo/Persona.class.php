@@ -1,6 +1,7 @@
 <?php
+include_once 'ModeloDatosGenerico.php';
 
-class Persona {
+class Persona extends ModeloDatosGenerico{
 
 //atributos, getter y setters
     protected $id;
@@ -10,11 +11,7 @@ class Persona {
     protected $telefono;
     
     function __construct($array) {
-        $this->id = $array["id"];
-        $this->nombre = $array["nombre"];
-        $this->dni = $array["dni"];
-        $this->email = $array["email"];
-        $this->telefono = $array["telefono"];
+        parent::mapeoArrayAtributos($array);
     }
 
     function getId() {
