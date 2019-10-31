@@ -1,0 +1,67 @@
+<?php
+
+class Persona {
+
+//atributos, getter y setters
+    protected $id;
+    protected $nombre;
+    protected $dni;
+    protected $email;
+    protected $telefono;
+    
+    function __construct($array) {
+        $this->id = $array["id"];
+        $this->nombre = $array["nombre"];
+        $this->dni = $array["dni"];
+        $this->email = $array["email"];
+        $this->telefono = $array["telefono"];
+    }
+
+    function getId() {
+        return $this->id;
+    }
+
+    function getNombre() {
+        return $this->nombre;
+    }
+
+    function getDni() {
+        return $this->dni;
+    }
+
+    function getEmail() {
+        return $this->email;
+    }
+
+    function getTelefono() {
+        return $this->telefono;
+    }
+
+    function setId($id) {
+        $this->id = $id;
+    }
+
+    function setNombre($nombre) {
+        $this->nombre = $nombre;
+    }
+
+    function setDni($dni) {
+        $this->dni = $dni;
+    }
+
+    function setEmail($email) {
+        $this->email = $email;
+    }
+
+    function setTelefono($telefono) {
+        $this->telefono = $telefono;
+    }
+}
+
+
+$array["id"] = 1;
+$array["nombre"] = "Eder";
+
+$P1 = new Persona($array);
+var_dump($P1);
+
