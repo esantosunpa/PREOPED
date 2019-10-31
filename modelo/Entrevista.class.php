@@ -1,16 +1,14 @@
 <?php
-class Entrevista{
+include_once 'ModeloDatosGenerico.php';
+
+class Entrevista extends ModeloDatosGenerico{
     private $id; 
     private $fecha;
     private $entrevistador;
     private $entrevistado;
     private $conclusiones;
     function __construct($array){
-        $this->id = $array["id"];
-        $this->fecha = $array["fecha"];
-        $this->entrevistador = $array["entrevistador"];
-        $this->entrevistado = $array["entrevistado"];
-        $this->conclusiones = $array["conclusiones"];
+        parent::mapeoArrayAtributos($array);
     }
     
     function getId() {

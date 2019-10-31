@@ -1,5 +1,7 @@
 <?php
-class Cursa{
+include_once 'ModeloDatosGenerico.php';
+
+class Cursa extends ModeloDatosGenerico{
 	private $id;
 	private $periodo;
 	private $anio;
@@ -7,12 +9,7 @@ class Cursa{
 	private $id_asignatura;
 	private $id_alumno;
         function __construct($array) {
-            $this->id = $id;
-            $this->periodo = $periodo;
-            $this->anio = $anio;
-            $this->evaluacion = $evaluacion;
-            $this->id_asignatura = $id_asignatura;
-            $this->id_alumno = $id_alumno;
+            parent::mapeoArrayAtributos($array);
         }
 
         function getId() {

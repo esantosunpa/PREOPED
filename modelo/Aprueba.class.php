@@ -1,16 +1,14 @@
 <?php
-class Aprueba{
+include_once 'ModeloDatosGenerico.php';
+
+class Aprueba extends ModeloDatosGenerico{
 	private $id;
 	private $fecha;
 	private $calificacion;
 	private $id_asignatura;
 	private $id_alumno;
         function __construct($array) {
-            $this->id = $array[$id];
-            $this->fecha = $array[$fecha];
-            $this->calificacion = $array[$calificacion];
-            $this->id_asignatura = $array[$id_asignatura];
-            $this->id_alumno = $array[$id_alumno];
+            parent::mapeoArrayAtributos($array);
         }
 
         function getId() {

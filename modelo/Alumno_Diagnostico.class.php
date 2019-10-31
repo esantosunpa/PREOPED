@@ -1,15 +1,14 @@
 <?php
-class Alumno_Diagnostico{
+include_once 'ModeloDatosGenerico.php';
+
+class Alumno_Diagnostico extends ModeloDatosGenerico{
     private $id;
     private $id_diagostico;
     private $id_alumno;
     private $profesional_diagnostico;
     
     function __construct($array) {
-        $this->id = $array["id"];
-        $this->id_diagostico = $array["id_diagnostico"];
-        $this->id_alumno = $array["id_alumno"];
-        $this->profesional_diagnostico = $array["profesional_diagnostico"];
+        parent::mapeoArrayAtributos($array);
     }
 
     

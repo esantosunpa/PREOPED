@@ -1,12 +1,12 @@
 <?php
-class Carrera_Asignatura{
+include_once 'ModeloDatosGenerico.php';
+
+class Carrera_Asignatura extends ModeloDatosGenerico{
     private $id;
     private $id_asignatura;
     private $id_carrera;
     function __construct($array) {
-        $this->id = $array[$id];
-        $this->id_asignatura = $array[$id_asignatura];
-        $this->id_carrera = $array[$id_carrera];
+        parent::mapeoArrayAtributos($array);
     }
 
     function getId() {

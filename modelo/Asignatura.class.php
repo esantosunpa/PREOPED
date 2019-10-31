@@ -1,10 +1,11 @@
 <?php
-class Asignatura{
+include_once 'ModeloDatosGenerico.php';
+
+class Asignatura extends ModeloDatosGenerico{
     private $id;
     private $nombre;
     function __construct($array) {
-        $this->id = $array[$id];
-        $this->nombre = $array[$nombre];
+        parent::mapeoArrayAtributos($array);
     }
 
     function getId() {

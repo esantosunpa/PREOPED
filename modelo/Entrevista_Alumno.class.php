@@ -1,13 +1,13 @@
 <?php
-class Entrevista_Alumno{
+include_once 'ModeloDatosGenerico.php';
+
+class Entrevista_Alumno extends ModeloDatosGenerico{
     private $id;
     private $id_entrevista;
     private $id_alumno; 
 
     function __construct($array){
-        $this->id = $array["id"];
-        $this->id_entrevista = $array["id_entrevista"];
-        $this->id_alumno = $array["id_alumno"];
+        parent::mapeoArrayAtributos($array);
     }
     
     function getId() {

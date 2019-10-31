@@ -1,13 +1,13 @@
 <?php
-class Alumno_Familiar{
+include_once 'ModeloDatosGenerico.php';
+
+class Alumno_Familiar extends ModeloDatosGenerico{
     private $id;
     private $id_familiar;
     private $id_alumno; 
     
     function __construct($array) {
-        $this->id = $array["id"];
-        $this->id_familiar = $array["id_familiar"];
-        $this->id_alumno = $array["id_alumno"];
+        parent::mapeoArrayAtributos($array);
     }
 
     

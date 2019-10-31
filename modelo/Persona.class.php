@@ -57,8 +57,9 @@ class Persona extends ModeloDatosGenerico{
 
 
 $array["id"] = 1;
-$array["nombre"] = "Eder";
+$array["nombre"] = "Ramiro2";
 
 $P1 = new Persona($array);
 var_dump($P1);
+//echo "asd";
 

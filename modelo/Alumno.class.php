@@ -1,11 +1,11 @@
 <?php
+//NO ANDA
 class Alumno extends Persona {
 	private $anio_ingreso;
 	private $cud;
         
         function __construct($array) {
-            $this->anio_ingreso = $array["anio_ingreso"];
-            $this->cud = $array["cud"];
+            parent::mapeoArrayAtributos($array);
         }
 
         
@@ -26,3 +26,5 @@ class Alumno extends Persona {
         }
 
 }
+
+//echo "asd";
