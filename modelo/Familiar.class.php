@@ -1,12 +1,12 @@
 <?php
 
-//No anda
+include_once 'Persona.class.php';
+
 class Familiar extends Persona {
 
-    private $parentesco;
+    protected $parentesco;
     function __construct($array) {
-        $this->parentesco = $array["parentesco"];
-        //parent::mapeoArrayAtributos($array); //?
+        parent::mapeoArrayAtributos($array); //?
     }
 
     function getParentesco() {
@@ -18,9 +18,12 @@ class Familiar extends Persona {
     }
 }
 
-//$array["id"] = 1;
-//echo "asd";
-//$array["id"] = 1;
+$array["id"] = 1;
+$array["nombre"] = "Familiar";
+$array["parentesco"] = "padre";
+
+$P1 = new Familiar($array);
+var_dump($P1);
 
    
 

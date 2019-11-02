@@ -2,11 +2,12 @@
 include_once 'ModeloDatosGenerico.php';
 
 class Entrevista extends ModeloDatosGenerico{
-    private $id; 
-    private $fecha;
-    private $entrevistador;
-    private $entrevistado;
-    private $conclusiones;
+    protected $id; 
+    protected $fecha;
+    protected $entrevistador;
+    protected $entrevistado;
+    protected $conclusiones;
+    
     function __construct($array){
         parent::mapeoArrayAtributos($array);
     }
@@ -54,7 +55,7 @@ class Entrevista extends ModeloDatosGenerico{
 
 }
 $array["id"] = 1;
-$array["fecha"] = "Eder";
+$array["fecha"] = "asd";
 
 $P1 = new Entrevista($array);
 var_dump($P1);

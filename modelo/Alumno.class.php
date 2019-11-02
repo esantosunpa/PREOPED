@@ -1,11 +1,21 @@
 <?php
-//NO ANDA
+//Para mostrar los errores
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+include_once 'Persona.class.php';
+
 class Alumno extends Persona {
-	private $anio_ingreso;
-	private $cud;
+	protected $anio_ingreso;
+	protected $cud;
         
         function __construct($array) {
+            
+            //parent::__construct($array);
             parent::mapeoArrayAtributos($array);
+            
+          
         }
 
         
@@ -27,4 +37,9 @@ class Alumno extends Persona {
 
 }
 
-//echo "asd";
+$array["id"] = 1;
+$array["nombre"] = "Alumno";
+$array["anio_ingreso"] = "2019";
+
+$P1 = new Alumno($array);
+var_dump($P1);
