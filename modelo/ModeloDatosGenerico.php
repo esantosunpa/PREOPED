@@ -6,11 +6,14 @@
  * and open the template in the editor.
  */
 
-class ModeloDatosGenerico{
-    function mapeoArrayAtributos($array){
+class ModeloDatosGenerico {
+
+    function mapeoArrayAtributos($array) {
         foreach ($array as $atributo => $valor) {
-            $this->{$atributo}=$valor;
+            if (property_exists($this, $atributo)) {
+                $this->{$atributo} = $valor;
+            }
         }
     }
-}
 
+}

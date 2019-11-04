@@ -2,8 +2,12 @@
 include_once 'ModeloDatosGenerico.php';
 
 class Asignatura extends ModeloDatosGenerico{
-    private $id;
-    private $nombre;
+    protected $id;
+    /**
+     *
+     * @var string 
+     */
+    protected $nombre;
     function __construct($array) {
         parent::mapeoArrayAtributos($array);
     }

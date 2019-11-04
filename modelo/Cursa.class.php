@@ -2,12 +2,13 @@
 include_once 'ModeloDatosGenerico.php';
 
 class Cursa extends ModeloDatosGenerico{
-	private $id;
-	private $periodo;
-	private $anio;
-	private $evaluacion;
-	private $id_asignatura;
-	private $id_alumno;
+	protected $id;
+	protected $periodo;
+	protected $anio;
+	protected $evaluacion;
+	//protected $id_asignatura;
+        protected $asignatura;
+	protected $id_alumno;
         function __construct($array) {
             parent::mapeoArrayAtributos($array);
         }
