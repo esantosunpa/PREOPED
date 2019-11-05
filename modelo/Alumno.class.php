@@ -1,7 +1,8 @@
 <?php
+
 // Crear colecciones de las relaciones, 1 a 1 (objeto), 1 a n (array), n a m (clase)
 // metodos, en constructor? add? set?
-// hecho: alumno: asignatura, diagnostico
+// hecho: alumno: asignatura, diagnostico, haciendo: aprueba
 // 
 // Para mostrar los errores
 
@@ -10,14 +11,16 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 include_once 'Persona.class.php';
-
+include_once 'Alumno_Diagnostico.class.php';
 
 class Alumno extends Persona {
 
     protected $anio_ingreso;
     protected $cud;
+
 //    protected $cursa;
 //    protected $alumno_diagnostico;
+
     /**
      * 
      * @param Array $array
@@ -26,15 +29,6 @@ class Alumno extends Persona {
         parent::mapeoArrayAtributos($array);
     }
 
-//    function getCursa() {
-//        foreach ($this->cursa as $c) {
-//            echo $c->getAsignatura()->getNombre();
-//        }
-//    }
-//
-//    function addCursa($cursa) {
-//        $this->cursa[] = $cursa;
-//    }
     function getAnio_ingreso() {
         return $this->anio_ingreso;
     }
@@ -50,13 +44,33 @@ class Alumno extends Persona {
     function setCud($cud) {
         $this->cud = $cud;
     }
+
+    //Agregar objeto ALumno_Familiar en array en Alumno o Familiar?
+    function createAlumno_Familiar($familiar) {
+        $arrayA_F["familiar"] = $familiar;
+        $arrayA_F["alumno"] = $this;
+        $A_F = new Alumno_Familiar($arrayA_F);
+//      O Usar sets?
+//      $A_F->setAlumno($this);
+//      $A_F->setFamiliar($familiar);
+        return $A_F;
+    }
     
+    function createAlumno_Diagnostico($diagnostico){
+        $arrayA_D["alumno"] = $this;
+        $arrayA_D["diagnostico"] = $diagnostico;
+        $A_D = new Alumno_Diagnostico($arrayA_D);
+        return $A_D;
+    }
+
 //    function getAlumno_diagnostico() {
 //        //return $this->alumno_diagnostico;
 //    }
+
 //    function addAlumno_diagnostico($a_l) {
 //        $this->alumno_diagnostico[] = $a_l;
 //    }
+
 }
 
 //Prueba relacion Cursa
