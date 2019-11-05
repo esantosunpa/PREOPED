@@ -5,12 +5,15 @@ class Alumno_Familiar extends ModeloDatosGenerico{
     private $id;
     private $id_familiar;
     private $id_alumno; 
+    private $familiar;
+    private $alumno;
+    // Hacer seters, funcion en alumno setee y getee
+    // Agregar Familiar Alumno en el constructor
     
     function __construct($array) {
         parent::mapeoArrayAtributos($array);
-    }
-
-    
+    } 
+ 
     function getId() {
         return $this->id;
     }
