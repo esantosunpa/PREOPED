@@ -8,7 +8,8 @@ class Cursa extends ModeloDatosGenerico{
 	protected $evaluacion;
 	//protected $id_asignatura;
         protected $asignatura;
-	protected $id_alumno;
+	//protected $id_alumno;
+        protected $alumno;
         function __construct($array) {
             parent::mapeoArrayAtributos($array);
         }
@@ -29,8 +30,8 @@ class Cursa extends ModeloDatosGenerico{
             return $this->evaluacion;
         }
 
-        function getId_asignatura() {
-            return $this->id_asignatura;
+        function getAsignatura() {
+            return $this->asignatura;
         }
 
         function getId_alumno() {
@@ -53,13 +54,21 @@ class Cursa extends ModeloDatosGenerico{
             $this->evaluacion = $evaluacion;
         }
 
-        function setId_asignatura($id_asignatura) {
-            $this->id_asignatura = $id_asignatura;
+        function setAsignatura($asignatura) {
+            $this->asignatura = $asignatura;
         }
 
         function setId_alumno($id_alumno) {
             $this->id_alumno = $id_alumno;
         }
 
-        
+        function getAlumno() {
+            return $this->alumno;
+        }
+
+        function setAlumno($alumno) {
+            $this->alumno = $alumno;
+        }
+
+
 }

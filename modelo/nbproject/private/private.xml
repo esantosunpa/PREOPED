@@ -9,6 +9,8 @@
             <file>file:/var/www/html/preoped/modelo/Asignatura.class.php</file>
             <file>file:/var/www/html/preoped/modelo/Cursa.class.php</file>
             <file>file:/var/www/html/preoped/modelo/Alumno.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/Alumno_Diagnostico.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/Diagnostico.class.php</file>
             <file>file:/var/www/html/preoped/modelo/Familiar.class.php</file>
             <file>file:/var/www/html/preoped/modelo/Entrevista.class.php</file>
         </group>

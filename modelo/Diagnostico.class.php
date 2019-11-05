@@ -2,10 +2,10 @@
 include_once 'ModeloDatosGenerico.php';
 
 class Diagnostico extends ModeloDatosGenerico{
-    private $id;
-    private $diagnostico;
-    private $tipo_discapacidad; 
-    private $descripcion; 
+    protected $id;
+    protected $diagnostico;
+    protected $tipo_discapacidad; 
+    protected $descripcion; 
 
     function __construct($array){
         parent::mapeoArrayAtributos($array);
