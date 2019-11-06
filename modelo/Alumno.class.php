@@ -1,15 +1,5 @@
 <?php
 
-// Crear colecciones de las relaciones, 1 a 1 (objeto), 1 a n (array), n a m (clase)
-// metodos, en constructor? add? set?
-// hecho: alumno: asignatura, diagnostico, haciendo: aprueba
-// 
-// Para mostrar los errores
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 include_once 'Persona.class.php';
 include_once 'Alumno_Diagnostico.class.php';
 
@@ -73,27 +63,5 @@ class Alumno extends Persona {
 
 }
 
-//Prueba relacion Cursa
-include_once 'Asignatura.class.php';
-include_once 'Cursa.class.php';
 
-$alumnoArray["nombre"] = "Alumno";
-$A1 = new Alumno($alumnoArray);
-$cursaArray["alumno"] = $A1;
-$arrayAsig["nombre"] = "Asignatura1";
-$cursaArray["asignatura"] = new Asignatura($arrayAsig);
-$C1 = new Cursa($cursaArray);
-var_dump($C1);
-echo $C1->getAlumno()->getNombre();
-echo $C1->getAsignatura()->getNombre();
-
-include_once 'Diagnostico.class.php';
-include_once 'Alumno_Diagnostico.class.php';
-
-$aDiag["diagnostico"] = "diagnostico1";
-$D1 = new Diagnostico($aDiag);
-$aA_D["diagnostico"] = $D1;
-$aA_D["alumno"] = $A1;
-$A_D1 = new Alumno_Diagnostico($aA_D);
-var_dump($A_D1);
 
