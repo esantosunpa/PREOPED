@@ -34,3 +34,7 @@ $aA_D["diagnostico"] = $D1;
 $aA_D["alumno"] = $A1;
 $A_D1 = new Alumno_Diagnostico($aA_D);
 var_dump($A_D1);
+
+//Prueba ALumno_DIagnostico
+$A_D = $A1->createAlumno_Diagnostico($D1);
+var_dump($A_D);

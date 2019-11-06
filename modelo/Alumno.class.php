@@ -62,6 +62,12 @@ class Alumno extends Persona {
 //    }
 
 }
+include_once 'Diagnostico.class.php';
+$array["nombre"] = "nombre1";
+$A1 = new Alumno($array);
+$D1 = new Diagnostico($array);
+$A_D = $A1->createAlumno_Diagnostico($D1);
+var_dump($A_D);
 
 
 
