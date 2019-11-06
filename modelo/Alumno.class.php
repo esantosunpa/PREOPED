@@ -52,6 +52,20 @@ class Alumno extends Persona {
         $A_D = new Alumno_Diagnostico($arrayA_D);
         return $A_D;
     }
+    
+    function createCursa_Asignatura($Asignatura){
+        $arrayA_C["alumno"] = $this;
+        $arrayA_C["asignatura"] = $Asignatura;
+        $A_C = new Cursa($arrayA_C);
+        return $A_C;
+    }
+    
+    function createAprueba($Asignatura){
+        $arrayA_A["alumno"] = $this;
+        $arrayA_A["asignatura"] = $Asignatura;
+        $A_A = new Aprueba($arrayA_A);
+        return $A_A;
+    }
 
 //    function getAlumno_diagnostico() {
 //        //return $this->alumno_diagnostico;
@@ -62,12 +76,12 @@ class Alumno extends Persona {
 //    }
 
 }
-include_once 'Diagnostico.class.php';
-$array["nombre"] = "nombre1";
-$A1 = new Alumno($array);
-$D1 = new Diagnostico($array);
-$A_D = $A1->createAlumno_Diagnostico($D1);
-var_dump($A_D);
+//include_once 'Diagnostico.class.php';
+//$array["nombre"] = "nombre1";
+//$A1 = new Alumno($array);
+//$D1 = new Diagnostico($array);
+//$A_D = $A1->createAlumno_Diagnostico($D1);
+//var_dump($A_D);
 
 
 

@@ -2,11 +2,14 @@
 include_once 'ModeloDatosGenerico.php';
 
 class Aprueba extends ModeloDatosGenerico{
-	private $id;
-	private $fecha;
-	private $calificacion;
-	private $id_asignatura;
-	private $id_alumno;
+	protected $id;
+	protected $fecha;
+	protected $calificacion;
+//	protected $id_asignatura;
+//	protected $id_alumno;
+        protected $asignatura;
+	protected $alumno;
+        
         function __construct($array) {
             parent::mapeoArrayAtributos($array);
         }
@@ -23,13 +26,13 @@ class Aprueba extends ModeloDatosGenerico{
             return $this->calificacion;
         }
 
-        function getId_asignatura() {
-            return $this->id_asignatura;
-        }
-
-        function getId_alumno() {
-            return $this->id_alumno;
-        }
+//        function getId_asignatura() {
+//            return $this->id_asignatura;
+//        }
+//
+//        function getId_alumno() {
+//            return $this->id_alumno;
+//        }
 
         function setId($id) {
             $this->id = $id;
@@ -42,14 +45,30 @@ class Aprueba extends ModeloDatosGenerico{
         function setCalificacion($calificacion) {
             $this->calificacion = $calificacion;
         }
-
-        function setId_asignatura($id_asignatura) {
-            $this->id_asignatura = $id_asignatura;
+        
+        function getAsignatura() {
+            return $this->asignatura;
         }
 
-        function setId_alumno($id_alumno) {
-            $this->id_alumno = $id_alumno;
+        function getAlumno() {
+            return $this->alumno;
         }
+
+        function setAsignatura($asignatura) {
+            $this->asignatura = $asignatura;
+        }
+
+        function setAlumno($alumno) {
+            $this->alumno = $alumno;
+        }
+
+//        function setId_asignatura($id_asignatura) {
+//            $this->id_asignatura = $id_asignatura;
+//        }
+//
+//        function setId_alumno($id_alumno) {
+//            $this->id_alumno = $id_alumno;
+//        }
 
 
 }
