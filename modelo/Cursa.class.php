@@ -6,10 +6,11 @@ class Cursa extends ModeloDatosGenerico{
 	protected $periodo;
 	protected $anio;
 	protected $evaluacion;
-	//protected $id_asignatura;
+	protected $id_asignatura;
         protected $asignatura;
-	//protected $id_alumno;
+	protected $id_alumno;
         protected $alumno;
+        
         function __construct($array) {
             parent::mapeoArrayAtributos($array);
         }

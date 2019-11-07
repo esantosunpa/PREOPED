@@ -5,8 +5,8 @@ class Aprueba extends ModeloDatosGenerico{
 	protected $id;
 	protected $fecha;
 	protected $calificacion;
-//	protected $id_asignatura;
-//	protected $id_alumno;
+	protected $id_asignatura;
+	protected $id_alumno;
         protected $asignatura;
 	protected $alumno;
         
@@ -26,13 +26,13 @@ class Aprueba extends ModeloDatosGenerico{
             return $this->calificacion;
         }
 
-//        function getId_asignatura() {
-//            return $this->id_asignatura;
-//        }
-//
-//        function getId_alumno() {
-//            return $this->id_alumno;
-//        }
+        function getId_asignatura() {
+            return $this->id_asignatura;
+        }
+
+        function getId_alumno() {
+            return $this->id_alumno;
+        }
 
         function setId($id) {
             $this->id = $id;
@@ -62,13 +62,11 @@ class Aprueba extends ModeloDatosGenerico{
             $this->alumno = $alumno;
         }
 
-//        function setId_asignatura($id_asignatura) {
-//            $this->id_asignatura = $id_asignatura;
-//        }
-//
-//        function setId_alumno($id_alumno) {
-//            $this->id_alumno = $id_alumno;
-//        }
+        function setId_asignatura($id_asignatura) {
+            $this->id_asignatura = $id_asignatura;
+        }
 
-
+        function setId_alumno($id_alumno) {
+            $this->id_alumno = $id_alumno;
+        }
 }

@@ -2,9 +2,11 @@
 include_once 'ModeloDatosGenerico.php';
 
 class Entrevista_Alumno extends ModeloDatosGenerico{
-    private $id;
-    private $id_entrevista;
-    private $id_alumno; 
+    protected $id;
+    protected $id_entrevista;
+    protected $id_alumno; 
+    protected $entrevista;
+    protected $alumno; 
 
     function __construct($array){
         parent::mapeoArrayAtributos($array);
@@ -34,5 +36,19 @@ class Entrevista_Alumno extends ModeloDatosGenerico{
         $this->id_alumno = $id_alumno;
     }
 
+    function getEntrevista() {
+        return $this->entrevista;
+    }
 
+    function getAlumno() {
+        return $this->alumno;
+    }
+
+    function setEntrevista($entrevista) {
+        $this->entrevista = $entrevista;
+    }
+
+    function setAlumno($alumno) {
+        $this->alumno = $alumno;
+    }
 }

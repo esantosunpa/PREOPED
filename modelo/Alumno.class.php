@@ -2,6 +2,10 @@
 
 include_once 'Persona.class.php';
 include_once 'Alumno_Diagnostico.class.php';
+include_once 'Alumno_Familiar.class.php';
+include_once 'Cursa.class.php';
+include_once 'Aprueba.class.php';
+include_once 'Entrevista_Alumno.class.php';
 
 class Alumno extends Persona {
 
@@ -66,6 +70,13 @@ class Alumno extends Persona {
         $A_A = new Aprueba($arrayA_A);
         return $A_A;
     }
+    
+    function createEntrevista_Alumno($Entrevista){
+        $arrayEnt["alumno"] = $this;
+        $arrayEnt["entrevista"] = $Entrevista;
+        $E_A = new Entrevista_Alumno($arrayEnt);
+        return $E_A;
+    }
 
 //    function getAlumno_diagnostico() {
 //        //return $this->alumno_diagnostico;
@@ -76,12 +87,6 @@ class Alumno extends Persona {
 //    }
 
 }
-//include_once 'Diagnostico.class.php';
-//$array["nombre"] = "nombre1";
-//$A1 = new Alumno($array);
-//$D1 = new Diagnostico($array);
-//$A_D = $A1->createAlumno_Diagnostico($D1);
-//var_dump($A_D);
 
 
 

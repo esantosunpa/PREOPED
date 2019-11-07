@@ -1,10 +1,11 @@
 <?php
 include_once 'ModeloDatosGenerico.php';
+include_once 'Carrera_Asignatura.php';
 
 
 class Carrera extends ModeloDatosGenerico{
-    private $id;
-    private $nombre;
+    protected $id;
+    protected $nombre;
     function __construct($array) {
         parent::mapeoArrayAtributos($array);
     }
@@ -25,5 +26,11 @@ class Carrera extends ModeloDatosGenerico{
         $this->nombre = $nombre;
     }
 
+    function createCarrera_Asignatura($Asignatura){
+        $arrayCA["carrera"] = $this;
+        $arrayCA["asignatura"] = $Asignatura;
+        $C_A = new Carrera_Asignatura($arrayCA);
+        return $C_A;
+    }
 
 }
