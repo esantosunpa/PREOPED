@@ -2,7 +2,8 @@
 
 // Crear colecciones de las relaciones, 1 a 1 (objeto), 1 a n (array), n a m (clase)
 // metodos, en constructor? add? set?
-// hecho: alumno: asignatura, diagnostico, haciendo: aprueba
+// hecho: alumno: asignatura, diagnostico, cursa, aprueba
+// falta: carrera_asignatura, entrevista_alumno, 
 // 
 // Para mostrar los errores
 
