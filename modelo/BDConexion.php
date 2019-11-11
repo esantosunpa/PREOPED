@@ -1,5 +1,7 @@
 <?php
-Class BDConexion extends msqli {
+include_once 'BDConfig.php';
+
+Class BDConexion extends mysqli {
     
     public function __contruct() {
         parent::__contruct(BDConfig::HOST, BDConfig::USUARIO, BDConfig::PASS, BDConfig::SCHEMA);
@@ -11,10 +13,4 @@ Class BDConexion extends msqli {
         
     }
 }
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+//echo BDConfig::HOST;
