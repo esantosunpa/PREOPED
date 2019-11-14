@@ -13,11 +13,14 @@
             <file>file:/var/www/html/preoped/modelo/Alumno_Familiar.class.php</file>
             <file>file:/var/www/html/preoped/modelo/Diagnostico.class.php</file>
             <file>file:/var/www/html/preoped/modelo/Familiar.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/BDConfig.php</file>
             <file>file:/var/www/html/preoped/modelo/Persona.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/DB.php</file>
             <file>file:/var/www/html/preoped/modelo/Alumno.class.php</file>
             <file>file:/var/www/html/preoped/modelo/Alumno_Diagnostico.class.php</file>
             <file>file:/var/www/html/preoped/modelo/prueba.php</file>
             <file>file:/var/www/html/preoped/modelo/Entrevista.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/BDConexion.php</file>
         </group>
     </open-files>
 </project-private>
