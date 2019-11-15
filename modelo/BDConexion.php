@@ -9,18 +9,14 @@ Class BDConexion extends mysqli {
     
     public function __construct() {
         parent::__construct(BDConfig::HOST, BDConfig::USUARIO, BDConfig::PASS, BDConfig::SCHEMA);
-        
-        if ($this->connect_error) {
-            
+        if ($this->connect_error) { 
             echo 'oh no :(';
-            
         }
-        
     }
 }
-$BDC = new BDConexion();
-$query = "SELECT id,nombre FROM Asignatura";
-$result = $BDC->query($query);
-$row = $result->fetch_array(MYSQLI_ASSOC); // NUM busca por id, ASSOC busca por nombre del campo, BOTH por ambas
-printf("%s %s  ", $row["id"],$row["nombre"]);
+//$BDC = new BDConexion();
+//$query = "SELECT id,nombre FROM Asignatura";
+//$result = $BDC->query($query);
+//$row = $result->fetch_array(MYSQLI_ASSOC); // NUM busca por id, ASSOC busca por nombre del campo, BOTH por ambas
+//printf("%s %s  ", $row["id"],$row["nombre"]);
 
