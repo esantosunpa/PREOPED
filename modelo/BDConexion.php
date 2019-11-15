@@ -18,9 +18,5 @@ Class BDConexion extends mysqli {
         
     }
 }
-$BDC = new BDConexion();
-$query = "SELECT id,nombre FROM Asignatura";
-$result = $BDC->query($query);
-$row = $result->fetch_array(MYSQLI_ASSOC); // NUM busca por id, ASSOC busca por nombre del campo, BOTH por ambas
-printf("%s %s  ", $row["id"],$row["nombre"]);
+
 
