@@ -4,6 +4,26 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/var/www/html/preoped/Pruebas/AlumnoMapper.php</file>
+            <file>file:/var/www/html/preoped/modelo/Entrevista_Alumno.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/Carrera.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/BDMapper.php</file>
+            <file>file:/var/www/html/preoped/modelo/Aprueba.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/ModeloDatosGenerico.php</file>
+            <file>file:/var/www/html/preoped/modelo/Asignatura.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/Cursa.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/Carrera_Asignatura.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/Alumno_Familiar.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/Diagnostico.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/Familiar.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/BDConfig.php</file>
+            <file>file:/var/www/html/preoped/modelo/AlumnoMapper.php</file>
+            <file>file:/var/www/html/preoped/modelo/Persona.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/DB.php</file>
+            <file>file:/var/www/html/preoped/modelo/Alumno.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/Alumno_Diagnostico.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/prueba.php</file>
+            <file>file:/var/www/html/preoped/modelo/Entrevista.class.php</file>
+            <file>file:/var/www/html/preoped/modelo/BDConexion.php</file>
         </group>
     </open-files>
 </project-private>
