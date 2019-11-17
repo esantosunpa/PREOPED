@@ -1,13 +1,10 @@
 <?php
 
-$dir = 'BDMapper.php';
+include_once 'BDMapper.php';
 
-include_once $dir;
-//echo $dir;
-
-class AlumnoMapper extends BDMapper{
+class Alumno_FamiliarMapper extends BDMapper{
     public function __construct() {
-        $this->nombreTabla = "Alumno";
+        $this->nombreTabla = "Familiar_Alumno";
         $this->nombreAtributoId = "id";
         parent::__construct();
     }
@@ -17,4 +14,3 @@ class AlumnoMapper extends BDMapper{
     }
     
 }
-

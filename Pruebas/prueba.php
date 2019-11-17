@@ -1,17 +1,5 @@
 <?php
 
-// Crear colecciones de las relaciones, 1 a 1 (objeto), 1 a n (array), n a m (clase)
-// metodos, en constructor? add? set?
-// hecho: alumno: asignatura, diagnostico, cursa, aprueba
-// falta: carrera_asignatura, entrevista_alumno, 
-// 
-// Para mostrar los errores
-
-// Prueba branch
-// Prueba2
-
-//Prueba3
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
