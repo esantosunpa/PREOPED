@@ -5,10 +5,10 @@ error_reporting(E_ALL);
 
 
 // Prueba
-include_once '../modelo/AlumnoMapper.php';
+include_once '../modelo/CarreraMapper.php';
 
-$mapperIdNoExistente = new AlumnoMapper();
-$mapperIdExistente = new AlumnoMapper();
+$mapperIdNoExistente = new CarreraMapper();
+$mapperIdExistente = new CarreraMapper();
 
 $resultadoIdExistente = $mapperIdExistente->findById(1);
 var_dump($resultadoIdExistente);

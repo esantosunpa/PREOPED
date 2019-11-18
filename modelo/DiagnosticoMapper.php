@@ -2,9 +2,9 @@
 
 include_once 'BDMapper.php';
 
-class AsignaturaMapper extends BDMapper{
+class DiagnosticoMapper extends BDMapper{
     public function __construct() {
-        $this->nombreTabla = "Asignatura";
+        $this->nombreTabla = "Diagnostico";
         $this->nombreAtributoId = "id";
         parent::__construct();
     }
