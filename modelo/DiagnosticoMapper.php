@@ -8,9 +8,4 @@ class DiagnosticoMapper extends BDMapper{
         $this->nombreAtributoId = "id";
         parent::__construct();
     }
-
-    public function findById($id) {
-        return parent::findById($id);
-    }
-    
 }
