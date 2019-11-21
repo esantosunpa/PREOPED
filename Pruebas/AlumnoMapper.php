@@ -7,10 +7,13 @@ error_reporting(E_ALL);
 // Prueba
 include_once '../modelo/AlumnoMapper.php';
 
-$mapperIdNoExistente = new AlumnoMapper();
-$mapperIdExistente = new AlumnoMapper();
+$AlumnoMapper = new AlumnoMapper();
 
-$resultadoIdExistente = $mapperIdExistente->findById(1);
-var_dump($resultadoIdExistente);
-$resultadoIdNoExistente = $mapperIdNoExistente->findById(-1);
-var_dump($resultadoIdNoExistente);
+/* Pruebas realizadas */
+/* 1. Instanciar objeto existente en la base. Debe funcionar. */
+$AlumnoExistente = $AlumnoMapper->findById(2);
+
+/* 2. Instanciar objeto no existente en la base. Debe arrojar error. */
+$AlumnoNoExistente = $AlumnoMapper->findById(-1);
+
+/* 3. Relacionar un alumno
