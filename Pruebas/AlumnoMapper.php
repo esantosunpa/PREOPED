@@ -6,11 +6,17 @@ error_reporting(E_ALL);
 
 // Prueba
 include_once '../modelo/AlumnoMapper.php';
+include_once '../modelo/Alumno.class.php';
 
-$mapperIdNoExistente = new AlumnoMapper();
-$mapperIdExistente = new AlumnoMapper();
+$AMaper = new AlumnoMapper();
 
-$resultadoIdExistente = $mapperIdExistente->findById(1);
-var_dump($resultadoIdExistente);
-$resultadoIdNoExistente = $mapperIdNoExistente->findById(-1);
-var_dump($resultadoIdNoExistente);
+//Prueba con resultado esperado = DATOS
+$AlumnoValido = new Alumno($AMaper->findById(1));
+
+//Prueba con resultado esperado = NULL
+$resultadoAlumnoNoExistente = $AMaper->findById(-1);
+
+
+$familiares = $AMaper->findFamiliares($AlumnoValido->getId());
+var_dump($familiares);
+

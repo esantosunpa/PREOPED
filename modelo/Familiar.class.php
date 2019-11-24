@@ -17,13 +17,3 @@ class Familiar extends Persona {
         $this->parentesco = $parentesco;
     }
 }
-
-$array["id"] = 1;
-$array["nombre"] = "Familiar";
-$array["parentesco"] = "padre";
-
-$P1 = new Familiar($array);
-var_dump($P1);
-
-   
-
