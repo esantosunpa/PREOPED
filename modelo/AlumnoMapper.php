@@ -8,12 +8,13 @@ include_once $dir;
 //echo $dir;
 
 include_once '../modelo/Familiar.class.php';
-/**
- * @var Familiar
- */
-$familiares; 
 
 class AlumnoMapper extends BDMapper{
+    /**
+     * @var Familiar
+     */
+    protected $familiares; 
+    
     public function __construct() {
         $this->nombreTabla = "Alumno";
         $this->nombreAtributoId = "id";
@@ -27,8 +28,9 @@ class AlumnoMapper extends BDMapper{
     public function findFamiliares($id){
         $this->query = "SELECT F.* "
                 . "FROM Familiar F, "
-                . "Familiar_Alumno AF WHERE F.id=AF.id_familiar "
-                . "AND AF.id_alumno = " . $id;
+                    . "Familiar_Alumno AF "
+                . "WHERE F.id = AF.id_familiar "
+                    . "AND id_alumno =".$id;
         $this->resultset = $this->bdconexion->query($this->query);
         for ($x = 0; $x < $this->resultset->num_rows; $x++){
             $this->familiares[] = new Familiar($this->resultset->fetch_assoc());
