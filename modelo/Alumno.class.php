@@ -22,7 +22,6 @@ class Alumno extends Persona {
     function __construct($array) {
         parent::mapeoArrayAtributos($array);
     }
-
     function getAnio_ingreso() {
         return $this->anio_ingreso;
     }
@@ -41,14 +40,18 @@ class Alumno extends Persona {
 
     //Agregar objeto ALumno_Familiar en array en Alumno o Familiar?
     function createAlumno_Familiar($familiar) {
-        $arrayA_F["familiar"] = $familiar;
+        
+        /*
+         * SELECT F.* FROM FAMILIAR F, ALUMNO_FAMILIAR AF WHERE F.id = AF.id_familiar AND id_alumno = 1
+         * $arrayA_F["familiar"] = $familiar;
         $arrayA_F["alumno"] = $this;
         $A_F = new Alumno_Familiar($arrayA_F);
 //      O Usar sets?
 //      $A_F->setAlumno($this);
 //      $A_F->setFamiliar($familiar);
-        return $A_F;
+        return $A_F;*/
     }
+    
     
     function createAlumno_Diagnostico($diagnostico){
         $arrayA_D["alumno"] = $this;

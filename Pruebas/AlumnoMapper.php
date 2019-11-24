@@ -7,10 +7,15 @@ error_reporting(E_ALL);
 // Prueba
 include_once '../modelo/AlumnoMapper.php';
 
-$mapperIdNoExistente = new AlumnoMapper();
-$mapperIdExistente = new AlumnoMapper();
+$AMaper = new AlumnoMapper();
 
-$resultadoIdExistente = $mapperIdExistente->findById(1);
-var_dump($resultadoIdExistente);
-$resultadoIdNoExistente = $mapperIdNoExistente->findById(-1);
-var_dump($resultadoIdNoExistente);
+//Prueba con resultado esperado = DATOS
+$AlumnoValido = $AMaper->findById(1);
+
+//Prueba con resultado esperado = NULL
+$resultadoAlumnoNoExistente = $AMaper->findById(-1);
+
+
+$familiares = $AMaper->findFamiliares(1);
+var_dump($familiares);
+

@@ -11,6 +11,5 @@ class Carrera_AsignaturaMapper extends BDMapper{
 
     public function findById($id) {
         return parent::findById($id);
-    }
-    
+    }   
 }
