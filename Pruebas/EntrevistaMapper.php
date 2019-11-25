@@ -6,11 +6,16 @@ error_reporting(E_ALL);
 
 // Prueba
 include_once '../modelo/EntrevistaMapper.php';
+include_once '../modelo/Entrevista.class.php';
 
-$mapperIdNoExistente = new EntrevistaMapper();
-$mapperIdExistente = new EntrevistaMapper();
+$EMapper = new EntrevistaMapper();
 
-$resultadoIdExistente = $mapperIdExistente->findById(1);
-var_dump($resultadoIdExistente);
-$resultadoIdNoExistente = $mapperIdNoExistente->findById(-1);
-var_dump($resultadoIdNoExistente);
+$EntExistente = new Entrevista($EMapper->findById(1));
+//var_dump($resultadoIdExistente);
+
+//$resultadoIdNoExistente = $EMapper->findById(-1);
+//var_dump($resultadoIdNoExistente);W
+
+//Devuelve alumnos de la entrevista
+$alumnos = $EMapper->findAlumnos($EntExistente->getId());
+var_dump($alumnos);

@@ -1,6 +1,7 @@
 <?php
 include_once 'ModeloDatosGenerico.php';
 
+
 class Entrevista extends ModeloDatosGenerico{
     protected $id; 
     protected $fecha;
