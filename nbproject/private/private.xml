@@ -9,12 +9,14 @@
             <file>file:/var/www/html/preoped/modelo/BDMapper.php</file>
             <file>file:/var/www/html/preoped/Pruebas/PruebaAsignaturaMapper.php</file>
             <file>file:/var/www/html/preoped/Pruebas/DiagnosticoMapper.php</file>
+            <file>file:/var/www/html/preoped/modelo/Alumno_Familiar.class.php</file>
             <file>file:/var/www/html/preoped/modelo/AsignaturaMapper.php</file>
             <file>file:/var/www/html/preoped/modelo/Alumno_FamiliarMapper.php</file>
+            <file>file:/var/www/html/preoped/modelo/Familiar.class.php</file>
             <file>file:/var/www/html/preoped/modelo/AlumnoMapper.php</file>
             <file>file:/var/www/html/preoped/modelo/ApruebaMapper.php</file>
+            <file>file:/var/www/html/preoped/modelo/Persona.class.php</file>
             <file>file:/var/www/html/preoped/modelo/Alumno.class.php</file>
-            <file>file:/var/www/html/preoped/Pruebas/prueba.php</file>
             <file>file:/var/www/html/preoped/modelo/BDConexion.php</file>
         </group>
     </open-files>

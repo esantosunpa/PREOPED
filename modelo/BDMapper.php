@@ -46,8 +46,7 @@ class BDMapper {
         $this->resultset = $this->bdconexion->query($this->query);
         return $this->resultset->fetch_assoc();
     }
-    
-    
+  
     
     
     

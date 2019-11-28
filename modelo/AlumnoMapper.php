@@ -23,12 +23,13 @@ class AlumnoMapper extends BDMapper {
      * @author Eder dos Santos <esantos@uarg.unpa.edu.ar>
      * 
      */
+
     public function __construct() {
         $this->nombreTabla = "vwalumno";
         $this->nombreAtributoId = "id";
         parent::__construct();
     }
-
+  
     /**
      * 
      * @param Int $id
@@ -50,6 +51,7 @@ class AlumnoMapper extends BDMapper {
         }
         return $this->familiares;
     }
+
 
     public function findDiagnosticos($id) {
 

@@ -1,6 +1,6 @@
 <?php
 include_once 'ModeloDatosGenerico.php';
-include_once 'Carrera_Asignatura.php';
+include_once 'Carrera_Asignatura.class.php';
 
 
 class Carrera extends ModeloDatosGenerico{

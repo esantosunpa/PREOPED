@@ -6,11 +6,15 @@ error_reporting(E_ALL);
 
 // Prueba
 include_once '../modelo/CarreraMapper.php';
+include_once '../modelo/Carrera.class.php';
 
-$mapperIdNoExistente = new CarreraMapper();
-$mapperIdExistente = new CarreraMapper();
+$Cmapper = new CarreraMapper();
 
-$resultadoIdExistente = $mapperIdExistente->findById(1);
-var_dump($resultadoIdExistente);
-$resultadoIdNoExistente = $mapperIdNoExistente->findById(-1);
-var_dump($resultadoIdNoExistente);
+$Carrera = new Carrera($Cmapper->findById(1));
+//var_dump($resultadoIdExistente
+//
+//$resultadoIdNoExistente = $mapperIdNoExistente->findById(-1);
+//var_dump($resultadoIdNoExistente);
+
+$asignaturas = $Cmapper->findAsignaturas($Carrera->getId());
+var_dump($asignaturas);
